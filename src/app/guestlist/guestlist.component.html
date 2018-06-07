@@ -6,3 +6,15 @@
     </ol>
   </div>
 </div>
+
+<div>
+    <label for="">First name: </label>
+    <input [(ngModel)]="searchGuest.firstName" placeholder="Enter guest first name...">
+</div>
+
+<div>
+    <label for="">Last name: </label>
+    <input [(ngModel)]="searchGuest.lastName" placeholder="Enter guest last name...">
+</div>
+
+<button (click)="findPeople(searchGuest)">Search</button>

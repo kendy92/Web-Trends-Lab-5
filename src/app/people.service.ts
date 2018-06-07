@@ -17,7 +17,23 @@ export class PeopleService {
     ];
 
   //* create func to return guest array
-  getPeople(): Observable< Person[] > {
+  getPeople(peopleOfInterest?: Person): Observable< Person[] > {
+
+    if(peopleOfInterest !== undefined) {
+
+      let peopleResults: Person[] = []; //create empty array to obtain result
+      
+      for(let p of this.people) { //* loop through people arr
+
+        if(peopleOfInterest.firstName.toLowerCase() === p.firstName.toLowerCase()) {
+            peopleResults.push(p);
+        }else if(peopleOfInterest.lastName.toLowerCase() === p.lastName.toLowerCase()) {
+            peopleResults.push(p);
+        }
+
+      }
+      return of(peopleResults);
+    }
     return of(this.people);
   }
   constructor() { }
