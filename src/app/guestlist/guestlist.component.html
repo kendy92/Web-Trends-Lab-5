@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Guest lists</h1>
+  <div *ngIf="guests">
+    <ol>
+      <li *ngFor="let guest of guests">{{ guest.firstName }} {{ guest.lastName }} {{ guest.dateOfBirth }}</li>
+    </ol>
+  </div>
+</div>
