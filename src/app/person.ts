@@ -6,10 +6,11 @@ export class Person { //* create person class
     lastName: string;
     dateOfBirth: Date;
 
-    getAge(): number { /* init method to get person age */
+    
+/*     getAge(): number { 
 
-        let today: Date = new Date(); //* init today as Date class
-        let age = today.getFullYear() - this.dateOfBirth.getFullYear(); //* cal person age
+        let today: Date = new Date();
+        let age = today.getFullYear() - this.dateOfBirth.getFullYear(); 
 
         if(
             this.dateOfBirth.getDate() > today.getDate() && 
@@ -18,5 +19,6 @@ export class Person { //* create person class
             age--;
         }
         return age;
-    }
+    } */
+    
 }
